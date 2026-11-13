@@ -1,0 +1,36 @@
+<section class="card">
+  <header class="card-header">
+    <h3>Novo usuário</h3>
+  </header>
+
+  <form class="formulario" [formGroup]="form" (ngSubmit)="cadastrarUsuario()">
+    <div class="campo">
+      <label for="nome-usuario">Nome completo</label>
+      <input id="nome-usuario" type="text" placeholder="Ex.: Maria Silva" formControlName="name" />
+    </div>
+
+    <div class="campo">
+      <label for="email-usuario">E-mail</label>
+      <input id="email-usuario" type="email" placeholder="nome@exemplo.com" formControlName="email" />
+      
+    </div>
+
+    <div class="campo">
+      <label for="perfil-usuario">Perfil</label>
+      <select id="perfil-usuario" formControlName="role">
+        <option value="" selected disabled>Selecione</option>
+        <option value="USER">Usuário</option>
+        <option value="ADMIN">Administrador</option>
+      </select>
+    </div>
+
+    <footer class="acoes">
+      <button type="button" class="botao-cancelar" (click)="cancelar.emit()">
+        Cancelar
+      </button>
+      <button type="submit" class="botao-adicionar" [disabled]="form.invalid">
+        + Adicionar usuário
+      </button>
+    </footer>
+  </form>
+</section>

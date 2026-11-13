@@ -1,0 +1,112 @@
+.card {
+  margin-bottom: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid #eef0f3;
+
+  h3 {
+    margin: 0;
+    color: #111827;
+  }
+}
+
+.formulario {
+  display: grid;
+  grid-template-columns: 1.4fr 1.1fr 0.8fr;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.campo {
+  display: grid;
+  gap: 0.45rem;
+
+  label {
+    color: #374151;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  input,
+  select {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 42px;
+    padding: 0.65rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    background: #fff;
+    color: #374151;
+    font: inherit;
+
+    &::placeholder {
+      color: #9ca3af;
+    }
+
+    &:focus {
+      outline: 2px solid #bfdbfe;
+      border-color: #2563eb;
+    }
+  }
+}
+
+.acoes {
+  display: flex;
+  justify-content: first baseline;
+  gap: 0.75rem;
+  padding: 0;
+}
+
+.botao-cancelar {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: #fff;
+  color: #374151;
+  cursor: pointer;
+  font: inherit;
+
+  &:hover {
+    background: #f3f4f6;
+  }
+}
+
+.botao-adicionar {
+  padding: 0.6rem 1rem;
+  border: 0;
+  border-radius: 6px;
+  background: #2563eb;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+
+  &:hover {
+    background: #1d4ed8;
+  }
+}
+
+@media (max-width: 720px) {
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+
+  .acoes {
+    justify-content: stretch;
+    flex-direction: column-reverse;
+  }
+
+  .botao-cancelar,
+  .botao-adicionar {
+    width: 100%;
+  }
+}
