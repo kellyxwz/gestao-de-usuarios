@@ -1,59 +1,85 @@
-# CadastroUsuariosFrontend
+# Gestão de Usuários
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 22.2.5.
+Sistema full stack para gerenciamento de usuários, desenvolvido com **Angular** no frontend e **Java + Spring Boot** no backend.
 
-## Development server
+O projeto permite realizar operações de cadastro, consulta, atualização e exclusão de usuários, além de gerenciar perfis de acesso e o status de cada cadastro.
 
-To start a local development server, run:
+## Tecnologias utilizadas
 
-```bash
-ng serve
+### Frontend
+- Angular
+- TypeScript
+- HTML5
+- CSS3
+
+### Backend
+- Java
+- Spring Boot
+- Spring Data JPA
+- MapStruct
+- Maven
+- API REST
+
+### Ferramentas
+- Git e GitHub
+- Docker
+- Postman / Apidog
+
+## Funcionalidades
+
+- Cadastro de usuários.
+- Listagem de usuários.
+- Atualização dos dados cadastrados.
+- Exclusão de usuários.
+- Gerenciamento de perfis de acesso (`USER` e `ADMIN`).
+- Controle do status do usuário (ativo/inativo).
+- Validação de dados.
+- Integração entre frontend e backend por meio de API REST.
+
+## Estrutura do projeto
+
+```text
+gestao-de-usuarios/
+│
+├── back-end/
+│   ├── src/
+│   ├── postman/
+│   ├── pom.xml
+│   └── docker-compose.yml
+│
+├── front-end/
+│   ├── src/
+│   ├── public/
+│   ├── package.json
+│   └── angular.json
+│
+└── README.md
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## Como executar o projeto
 
-## Code scaffolding
+### Pré-requisitos
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- Java JDK
+- Node.js e npm
+- Maven (ou utilizar o Maven Wrapper disponível no projeto)
+- Banco de dados configurado conforme as propriedades do backend
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
+### 1. Clonar o repositório
 
 ```bash
-ng build
+git clone https://github.com/kellyxwz/gestao-de-usuarios.git
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+### 2. Executar o backend
 
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Entre na pasta:
 
 ```bash
-ng test
+cd gestao-de-usuarios/back-end
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+Execute a aplicação:
 
 ```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+./mvnw spring-boot:run
