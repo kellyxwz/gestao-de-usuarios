@@ -44,7 +44,7 @@ export class CadastrarUsuarios {
       },
       error: (httpError) => {
         const errorBack = httpError.error;
-        if (httpError.status === 400 && errorBack?.message === 'Email já cadastrado') {
+        if (httpError.status === 409 && errorBack?.message == 'Email já cadastrado') {
           this.form.get('email')?.setErrors({ emailCadastrado: true });
         } else {
           this.erroCadastro = true;
