@@ -101,18 +101,27 @@
 }
 
 .botao-adicionar {
-  padding: 0.6rem 1rem;
-  border: 0;
+  background-color: #d1d5db;
+  color: #6b7280;
+  cursor: not-allowed;
   border-radius: 6px;
-  background: #2563eb;
-  color: #fff;
-  cursor: pointer;
-  font: inherit;
-  font-weight: 600;
+  transition: 0.3s;
+  outline: none;
+  border: none;
+}
 
-  &:hover {
-    background: #1d4ed8;
-  }
+.botao-adicionar:disabled {
+  opacity: 1;
+}
+
+.botao-adicionar-ativo {
+  background-color: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.botao-adicionar-ativo:hover {
+  background-color: #1d4ed8;
 }
 
 @media (max-width: 720px) {

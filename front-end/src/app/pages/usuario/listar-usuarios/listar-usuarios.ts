@@ -11,7 +11,7 @@ import { Usuario } from '../models/usuario';
 })
 export class ListarUsuarios implements OnInit {
   protected readonly usuarios = signal<Usuario[]>([]);
-  protected tamanhoPagina = signal<number>(5);
+  protected tamanhoPagina = signal<number>(10);
   protected indicePagina = signal<number>(0);
 
   protected mostrandoCadastro = false;
